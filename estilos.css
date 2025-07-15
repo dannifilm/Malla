@@ -1,55 +1,53 @@
 body {
-  background-color: #fffafa; /* blanco suave */
+  background-color: #fffafc; /* blanco suave */
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 20px;
 }
 
 h1, h2 {
-  color: #c94f7c; /* rosa coquette fuerte */
+  color: #d26e91; /* rosa coquette fuerte */
   text-align: center;
 }
 
 .semestre {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .contenedor {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 15px;
+  justify-content: center;
   margin-top: 10px;
 }
 
 .curso {
-  border: 2px solid #a8d5ba; /* verde suave */
-  background-color: #f1fff4; /* verde pastel */
+  border: 2px solid #a8d5ba; /* verde pastel */
+  background-color: #f1fff4;
   color: #333;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 10px;
   width: 200px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   opacity: 1;
 }
 
 .curso:hover {
-  transform: scale(1.05);
-  background-color: #e5fae9;
+  transform: scale(1.03);
 }
 
 .curso.bloqueado {
   opacity: 0.5;
   pointer-events: none;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   border: 2px dashed #ccc;
 }
 
 .curso.aprobado {
-  background-color: #ffc6d2; /* rosa coquette aprobado */
+  background-color: #ffd6e0; /* rosa coquette aprobado */
   border-color: #f082ac;
 }
-
