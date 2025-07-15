@@ -1,53 +1,62 @@
 body {
-  background-color: #fffafc; /* blanco suave */
+  background-color: #fffafa;
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 20px;
 }
 
-h1, h2 {
-  color: #d26e91; /* rosa coquette fuerte */
+h1 {
+  color: #c94f7c;
   text-align: center;
-}
-
-.semestre {
   margin-bottom: 30px;
 }
 
-.contenedor {
+.malla {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 40px;
+}
+
+.ciclo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  flex: 0 0 220px;
+}
+
+.ciclo h2 {
+  color: #c94f7c;
+  margin-bottom: 10px;
 }
 
 .curso {
-  border: 2px solid #a8d5ba; /* verde pastel */
   background-color: #f1fff4;
+  border: 2px solid #a8d5ba;
   color: #333;
-  padding: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
   border-radius: 10px;
-  width: 200px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  opacity: 1;
+  transition: 0.2s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .curso:hover {
+  background-color: #e1f6ea;
   transform: scale(1.03);
 }
 
 .curso.bloqueado {
-  opacity: 0.5;
+  opacity: 0.4;
   pointer-events: none;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
   border: 2px dashed #ccc;
 }
 
 .curso.aprobado {
-  background-color: #ffd6e0; /* rosa coquette aprobado */
+  background-color: #ffc6d2;
   border-color: #f082ac;
 }
