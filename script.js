@@ -1,9 +1,10 @@
+// Cursos por ciclo (1 al 14) con IDs únicos y prerrequisitos (simples)
 const cursos = {
   1: [
-    { id: 'biocel', nombre: 'Biología Celular y Molecular', desbloquea: ['morfo1'] },
-    { id: 'introMed', nombre: 'Introducción a la Medicina', desbloquea: ['redInv1'] },
+    { id: 'biocel', nombre: 'Biología Celular y Molecular' },
+    { id: 'introMed', nombre: 'Introducción a la Medicina' },
     { id: 'mate', nombre: 'Matemática' },
-    { id: 'quimica', nombre: 'Química', desbloquea: ['bioquim'] },
+    { id: 'quimica', nombre: 'Química' },
     { id: 'lengua', nombre: 'Lengua y Oratoria' },
     { id: 'desemp', nombre: 'Desempeño Universitario' }
   ],
@@ -24,121 +25,123 @@ const cursos = {
     { id: 'ambiente', nombre: 'Educación Ambiental' }
   ],
   4: [
-    { id: 'morfo3', nombre: 'Morfofisiología III' },
-    { id: 'fisio', nombre: 'Fisiopatología' },
+    { id: 'morfo3', nombre: 'Morfofisiología III', prereq: ['morfo2'] },
+    { id: 'fisiopato', nombre: 'Fisiopatología' },
     { id: 'infecto', nombre: 'Infectología Básica' },
-    { id: 'crecimiento', nombre: 'Desarrollo y Crecimiento' },
+    { id: 'desarrollo', nombre: 'Desarrollo y Crecimiento' },
     { id: 'bioetica', nombre: 'Bioética' }
   ],
   5: [
-    { id: 'morfo4', nombre: 'Morfofisiología IV' },
-    { id: 'fisiopato', nombre: 'Fisiopatología II' },
+    { id: 'morfo4', nombre: 'Morfofisiología IV', prereq: ['morfo3'] },
+    { id: 'fisio1', nombre: 'Fisiopatología II' },
     { id: 'bioestad', nombre: 'Bioestadística' },
-    { id: 'fundamentos', nombre: 'Fundamentos de Medicina' },
-    { id: 'intercultural', nombre: 'Interculturalidad' },
-    { id: 'saludMental', nombre: 'Salud Mental' },
+    { id: 'fundamed', nombre: 'Fundamentos de Medicina Interna' },
+    { id: 'saludmental', nombre: 'Salud Mental' },
     { id: 'electivo5', nombre: 'Electivo' }
   ],
   6: [
-    { id: 'anatomiaPat', nombre: 'Anatomía Patológica' },
-    { id: 'apoyo', nombre: 'Apoyo al Diagnóstico' },
-    { id: 'farmacologia', nombre: 'Farmacología' },
+    { id: 'anatoPat', nombre: 'Anatomía Patológica' },
+    { id: 'apoyoDx', nombre: 'Apoyo al Diagnóstico' },
+    { id: 'farmaco', nombre: 'Farmacología' },
     { id: 'semiologia', nombre: 'Semiología' },
     { id: 'electivo6', nombre: 'Electivo' }
   ],
   7: [
     { id: 'nutricion', nombre: 'Nutrición y Prácticas Saludables' },
-    { id: 'epidemio', nombre: 'Epidemiología' },
-    { id: 'metodologia', nombre: 'Metodología de la Investigación' },
-    { id: 'medicinaInt1', nombre: 'Medicina Interna I' },
-    { id: 'calidad', nombre: 'Calidad de Atención Médica' }
+    { id: 'epi', nombre: 'Epidemiología' },
+    { id: 'metodoinv', nombre: 'Metodología de Investigación' },
+    { id: 'medint1', nombre: 'Medicina Interna I' },
+    { id: 'calidad', nombre: 'Seguridad del Paciente y Calidad' }
   ],
   8: [
-    { id: 'saludPublica', nombre: 'Salud Pública' },
-    { id: 'evidencia', nombre: 'Medicina Basada en la Evidencia' },
-    { id: 'medicinaInt2', nombre: 'Medicina Interna II' },
-    { id: 'atencionPrimaria', nombre: 'Atención Primaria en Salud' },
+    { id: 'saludpublica', nombre: 'Salud Pública' },
+    { id: 'medev', nombre: 'Medicina Basada en Evidencia' },
+    { id: 'medint2', nombre: 'Medicina Interna II' },
+    { id: 'atencPrim', nombre: 'Atención Primaria en Salud' },
     { id: 'electivo8', nombre: 'Electivo' }
   ],
   9: [
     { id: 'terapeutica', nombre: 'Terapéutica' },
     { id: 'tesis1', nombre: 'Tesis I' },
-    { id: 'medicinaInt3', nombre: 'Medicina Interna III' },
+    { id: 'medint3', nombre: 'Medicina Interna III' },
     { id: 'legal', nombre: 'Medicina Legal' },
     { id: 'electivo9', nombre: 'Electivo' }
   ],
   10: [
     { id: 'cirugia', nombre: 'Cirugía' },
-    { id: 'paliativos', nombre: 'Cuidados Paliativos y Rehabilitación Física' },
+    { id: 'paliativos', nombre: 'Cuidados Paliativos y Rehabilitación' },
     { id: 'eco', nombre: 'Ecografía' },
-    { id: 'casos1', nombre: 'Análisis de Casos I' }
+    { id: 'analisis1', nombre: 'Análisis de Casos I' }
   ],
   11: [
-    { id: 'pediatria', nombre: 'Pediatría' },
-    { id: 'gine', nombre: 'Ginecología y Obstetricia' },
+    { id: 'pedia', nombre: 'Pediatría' },
+    { id: 'gineco', nombre: 'Ginecología y Obstetricia' },
     { id: 'tesis2', nombre: 'Tesis II' }
   ],
   12: [
-    { id: 'infoBio', nombre: 'Informática Biomédica' },
+    { id: 'bioinfo', nombre: 'Informática Biomédica' },
     { id: 'gestion', nombre: 'Gerencia en Salud' },
-    { id: 'preInternado', nombre: 'Pre-internado' },
-    { id: 'casos2', nombre: 'Análisis de Casos II' }
+    { id: 'preinternado', nombre: 'Pre-internado' },
+    { id: 'analisis2', nombre: 'Análisis de Casos II' }
   ],
   13: [
-    { id: 'trabajo', nombre: 'Trabajo de Investigación' },
-    { id: 'intCirugia', nombre: 'Internado en Cirugía' },
-    { id: 'intGine', nombre: 'Internado en Ginecología y Obstetricia' }
+    { id: 'investigacion', nombre: 'Trabajo de Investigación' },
+    { id: 'internado1', nombre: 'Internado en Cirugía' },
+    { id: 'internado2', nombre: 'Internado en Gineco-Obstetricia' },
+    { id: 'internado3', nombre: 'Internado en Medicina' },
+    { id: 'internado4', nombre: 'Internado en Pediatría' }
   ],
   14: [
-    { id: 'intMed', nombre: 'Internado en Medicina' },
-    { id: 'intPedia', nombre: 'Internado en Pediatría' }
+    { id: 'internado5', nombre: 'Internado en Emergencias' },
+    { id: 'internado6', nombre: 'Internado en Salud Pública' },
+    { id: 'internado7', nombre: 'Internado en Familia y Comunidad' },
+    { id: 'internado8', nombre: 'Internado en Electivo' }
   ]
 };
 
-let aprobados = new Set();
+const aprobados = new Set();
 
 function crearCurso(curso) {
   const div = document.createElement('div');
   div.className = 'curso';
   div.textContent = curso.nombre;
   div.id = curso.id;
-  if (curso.prereq && !curso.prereq.every(p => aprobados.has(p))) {
-    div.classList.add('bloqueado');
-  }
-  div.onclick = () => {
-    if (div.classList.contains('bloqueado')) return;
+  if (curso.prereq) div.classList.add('bloqueado');
 
-    if (div.classList.contains('aprobado')) {
-      div.classList.remove('aprobado');
-      aprobados.delete(curso.id);
-    } else {
-      div.classList.add('aprobado');
-      aprobados.add(curso.id);
+  div.onclick = () => {
+    if (!div.classList.contains('bloqueado')) {
+      if (div.classList.contains('aprobado')) {
+        div.classList.remove('aprobado');
+        aprobados.delete(curso.id);
+      } else {
+        div.classList.add('aprobado');
+        aprobados.add(curso.id);
+      }
+      actualizarBloqueos();
     }
-    actualizarBloqueos();
   };
   return div;
 }
 
 function actualizarBloqueos() {
-  document.querySelectorAll('.curso').forEach(cursoDiv => {
-    const curso = encontrarCursoPorId(cursoDiv.id);
-    if (curso?.prereq) {
-      const ready = curso.prereq.every(p => aprobados.has(p));
-      if (ready) {
-        cursoDiv.classList.remove('bloqueado');
+  document.querySelectorAll('.curso').forEach(cursoEl => {
+    const info = encontrarCurso(cursoEl.id);
+    if (info?.prereq) {
+      const cumple = info.prereq.every(r => aprobados.has(r));
+      if (cumple) {
+        cursoEl.classList.remove('bloqueado');
       } else {
-        cursoDiv.classList.remove('aprobado');
-        cursoDiv.classList.add('bloqueado');
-        aprobados.delete(curso.id);
+        cursoEl.classList.remove('aprobado');
+        cursoEl.classList.add('bloqueado');
+        aprobados.delete(info.id);
       }
     }
   });
 }
 
-function encontrarCursoPorId(id) {
-  for (const semestre in cursos) {
-    for (const curso of cursos[semestre]) {
+function encontrarCurso(id) {
+  for (const ciclo in cursos) {
+    for (const curso of cursos[ciclo]) {
       if (curso.id === id) return curso;
     }
   }
@@ -147,21 +150,19 @@ function encontrarCursoPorId(id) {
 
 function renderMalla() {
   const malla = document.getElementById('malla');
-  for (const ciclo in cursos) {
-    const contenedor = document.createElement('div');
-    contenedor.className = 'semestre';
-
+  for (let ciclo = 1; ciclo <= 14; ciclo++) {
+    const columna = document.createElement('div');
+    columna.className = 'ciclo';
     const titulo = document.createElement('h2');
     titulo.textContent = `Ciclo ${ciclo}`;
-    contenedor.appendChild(titulo);
-
-    const fila = document.createElement('div');
-    fila.className = 'contenedor';
-    cursos[ciclo].forEach(curso => fila.appendChild(crearCurso(curso)));
-
-    contenedor.appendChild(fila);
-    malla.appendChild(contenedor);
+    columna.appendChild(titulo);
+    cursos[ciclo].forEach(curso => {
+      const divCurso = crearCurso(curso);
+      columna.appendChild(divCurso);
+    });
+    malla.appendChild(columna);
   }
 }
 
 renderMalla();
+
