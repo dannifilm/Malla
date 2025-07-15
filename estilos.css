@@ -1,1 +1,55 @@
+body {
+  background-color: #fffafa; /* blanco suave */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #c94f7c; /* rosa coquette fuerte */
+  text-align: center;
+}
+
+.semestre {
+  margin-bottom: 40px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.curso {
+  border: 2px solid #a8d5ba; /* verde suave */
+  background-color: #f1fff4; /* verde pastel */
+  color: #333;
+  padding: 12px;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+
+.curso:hover {
+  transform: scale(1.05);
+  background-color: #e5fae9;
+}
+
+.curso.bloqueado {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #f9f9f9;
+  border: 2px dashed #ccc;
+}
+
+.curso.aprobado {
+  background-color: #ffc6d2; /* rosa coquette aprobado */
+  border-color: #f082ac;
+}
 
