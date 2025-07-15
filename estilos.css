@@ -13,21 +13,29 @@ h1 {
 
 .malla {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   overflow-x: auto;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+  gap: 20px;
 }
 
 .ciclo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 10px;
-  flex: 0 0 220px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  min-width: 220px;
 }
 
 .ciclo h2 {
   color: #c94f7c;
+  font-size: 18px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .curso {
@@ -40,8 +48,7 @@ h1 {
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  transition: 0.2s;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
 }
 
 .curso:hover {
@@ -60,3 +67,4 @@ h1 {
   background-color: #ffc6d2;
   border-color: #f082ac;
 }
+
